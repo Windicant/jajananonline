@@ -836,7 +836,7 @@
             const whatsappNumber = '083848847331';
             
             // Create WhatsApp link
-            const whatsappUrl = `(https://wa.me/6283848847331?text=Saya%20tertarik%20dengan%20produk%20ini)`;
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
             
             // Open WhatsApp in new tab
             window.open(whatsappUrl, '_blank');
