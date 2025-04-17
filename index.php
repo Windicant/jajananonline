@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff4757">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <title>Jajanan Online - Seblak, Mie Jebew & Camilan Enak</title>
     <style>
         :root {
@@ -24,6 +27,7 @@
             background-color: #f8f9fa;
             color: #333;
             line-height: 1.6;
+            overflow-x: hidden;
         }
         
         header {
@@ -38,6 +42,7 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            width: 100%;
         }
         
         nav {
@@ -53,6 +58,7 @@
             display: flex;
             justify-content: center;
             list-style: none;
+            flex-wrap: wrap;
         }
         
         nav ul li {
@@ -64,6 +70,9 @@
             color: var(--dark);
             font-weight: 500;
             transition: color 0.3s;
+            font-size: 1rem;
+            padding: 5px 0;
+            display: inline-block;
         }
         
         nav ul li a:hover {
@@ -96,11 +105,13 @@
             z-index: 1;
             max-width: 800px;
             padding: 0 20px;
+            width: 100%;
         }
         
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
+            line-height: 1.2;
         }
         
         .hero p {
@@ -119,12 +130,19 @@
             transition: all 0.3s;
             border: none;
             cursor: pointer;
+            text-align: center;
+            min-width: 120px;
+            min-height: 44px;
         }
         
         .btn:hover {
             background-color: var(--secondary);
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn:active {
+            transform: scale(0.98);
         }
         
         .btn-outline {
@@ -213,6 +231,7 @@
         .menu-content p {
             color: #666;
             margin-bottom: 15px;
+            font-size: 0.95rem;
         }
         
         .price {
@@ -308,11 +327,16 @@
         .contact-info p {
             margin-bottom: 15px;
             color: #555;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         
         .social-links {
             display: flex;
             margin-top: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         
         .social-links a {
@@ -324,9 +348,9 @@
             background-color: var(--primary);
             color: white;
             border-radius: 50%;
-            margin-right: 10px;
             text-decoration: none;
             transition: background-color 0.3s;
+            font-size: 1.2rem;
         }
         
         .social-links a:hover {
@@ -341,6 +365,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             font-size: 1rem;
+            -webkit-appearance: none;
         }
         
         .contact-form textarea {
@@ -369,6 +394,7 @@
             justify-content: center;
             list-style: none;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
         
         .footer-links li {
@@ -389,15 +415,25 @@
             color: #aaa;
             font-size: 0.9rem;
         }
-        
+
+        /* Mobile Styles */
         @media (max-width: 768px) {
+            header {
+                padding: 1.5rem 0;
+            }
+            
             nav ul {
                 flex-direction: column;
                 align-items: center;
+                padding: 10px 0;
             }
             
             nav ul li {
-                margin: 10px 0;
+                margin: 8px 0;
+            }
+            
+            .hero {
+                height: 50vh;
             }
             
             .hero h1 {
@@ -406,14 +442,99 @@
             
             .hero p {
                 font-size: 1rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .btn-container {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
             }
             
             .btn {
-                padding: 10px 20px;
+                padding: 12px 24px;
+                margin: 0;
+                width: 100%;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
             }
             
             .section-title h2 {
                 font-size: 2rem;
+            }
+            
+            .menu-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .promo-banner {
+                padding: 2rem 1rem;
+            }
+            
+            .promo-banner h2 {
+                font-size: 1.8rem;
+            }
+            
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .contact-form input, 
+            .contact-form textarea {
+                padding: 12px;
+                font-size: 16px;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+            }
+            
+            .footer-links li {
+                margin: 8px 0;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+            
+            .menu-content h3 {
+                font-size: 1.3rem;
+            }
+            
+            .price {
+                font-size: 1.1rem;
+            }
+            
+            .social-links a {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+
+            .contact-info p {
+                font-size: 0.9rem;
+            }
+
+            .testimonial {
+                padding: 20px;
             }
         }
     </style>
@@ -443,8 +564,10 @@
         <div class="hero-content">
             <h1>Jajanan Online Enak & Pedasnya Nagih!</h1>
             <p>Temukan berbagai macam jajanan pedas dan minuman segar yang bikin ketagihan. Pesan sekarang dan nikmati di rumah!</p>
-            <a href="#menu" class="btn">Lihat Menu</a>
-            <a href="#contact" class="btn btn-outline">Pesan Sekarang</a>
+            <div class="btn-container">
+                <a href="#menu" class="btn">Lihat Menu</a>
+                <a href="#contact" class="btn btn-outline">Pesan Sekarang</a>
+            </div>
         </div>
     </section>
     
@@ -464,7 +587,7 @@
             <div class="menu-grid">
                 <div class="menu-item">
                     <div class="menu-img">
-                        <img src="images/seblak1.jpeg" alt="seblak1">
+                        <img src="images/seblak1.jpeg" alt="seblak1" loading="lazy">
                     </div>
                     <div class="menu-content">
                         <h3>Seblak Kuah/Nyemek Parasmanan</h3>
@@ -475,7 +598,7 @@
                 
                 <div class="menu-item">
                     <div class="menu-img">
-                        <img src="images/jebew.jpeg" alt="jebew">
+                        <img src="images/jebew.jpeg" alt="jebew" loading="lazy">
                     </div>
                     <div class="menu-content">
                         <h3>Mie Jebew</h3>
@@ -486,7 +609,7 @@
                 
                 <div class="menu-item">
                     <div class="menu-img">
-                        <img src="images/aci.jpeg" alt="aci">
+                        <img src="images/aci.jpeg" alt="aci" loading="lazy">
                     </div>
                     <div class="menu-content">
                         <h3>Baso Aci</h3>
@@ -497,7 +620,7 @@
                 
                 <div class="menu-item">
                     <div class="menu-img">
-                        <img src="images/miset.jpeg" alt="miset">
+                        <img src="images/miset.jpeg" alt="miset" loading="lazy">
                     </div>
                     <div class="menu-content">
                         <h3>Miset</h3>
@@ -511,7 +634,7 @@
             <div class="menu-grid">
                 <div class="menu-item">
                     <div class="menu-img">
-                        <img src="images/crispy.jpeg" alt="crispy">
+                        <img src="images/crispy.jpeg" alt="crispy" loading="lazy">
                     </div>
                     <div class="menu-content">
                         <h3>Banana Crispy</h3>
@@ -522,7 +645,7 @@
                 
                 <div class="menu-item">
                     <div class="menu-img">
-                        <img src="images/roll.jpg" alt="roll">
+                        <img src="images/roll.jpg" alt="roll" loading="lazy">
                     </div>
                     <div class="menu-content">
                         <h3>Banana Roll</h3>
@@ -533,7 +656,7 @@
                 
                 <div class="menu-item">
                     <div class="menu-img">
-                        <img src="images/cireng.jpeg" alt="cireng">
+                        <img src="images/cireng.jpeg" alt="cireng" loading="lazy">
                     </div>
                     <div class="menu-content">
                         <h3>Cireng Rasa Ayam atau usus</h3>
@@ -544,7 +667,7 @@
                 
                 <div class="menu-item">
                     <div class="menu-img">
-                        <img src="images/peras.jpeg" alt="peras">
+                        <img src="images/peras.jpeg" alt="peras" loading="lazy">
                     </div>
                     <div class="menu-content">
                         <h3>Es Jeruk Peras</h3>
@@ -555,7 +678,7 @@
                 
                 <div class="menu-item">
                     <div class="menu-img">
-                        <img src="images/kuwut.jpg" alt="kuwut">
+                        <img src="images/kuwut.jpg" alt="kuwut" loading="lazy">
                     </div>
                     <div class="menu-content">
                         <h3>Es Kuwut</h3>
@@ -566,7 +689,7 @@
                 
                 <div class="menu-item">
                     <div class="menu-img">
-                        <img src="images/campur.jpg" alt="campur">
+                        <img src="images/campur.jpg" alt="campur" loading="lazy">
                     </div>
                     <div class="menu-content">
                         <h3>Es Campur & Sop Buah</h3>
@@ -590,7 +713,7 @@
                         <p>"Seblak level 3 nya pas banget pedasnya! Nagih banget, udah pesen berkali-kali. Baso Acinya juga enak, kuahnya gurih."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="images/desti.jpeg" alt="desti">
+                        <img src="images/desti.jpeg" alt="desti" loading="lazy">
                         <div class="author-info">
                             <h4>Desti R</h4>
                             <p>Pelanggan Setia</p>
@@ -603,7 +726,7 @@
                         <p>"Mie Jebew level 5 beneran nendang! Cocok buat pecinta pedas ekstrim. Banana Rollnya juga enak, manisnya pas."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="images/shofil.jpeg" alt="shofil">
+                        <img src="images/shofil.jpeg" alt="shofil" loading="lazy">
                         <div class="author-info">
                             <h4>Shofil F</h4>
                             <p>Pecinta Pedas</p>
@@ -616,7 +739,7 @@
                         <p>"Pesen Es Kuwut sama Basreng Bojot buat teman ngerjain tugas, enak banget! Pengirimannya juga cepat. Recommended!"</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="images/meli.jpeg" alt="meli">
+                        <img src="images/meli.jpeg" alt="meli" loading="lazy">
                         <div class="author-info">
                             <h4>Meli A</h4>
                             <p>Mahasiswa</p>
@@ -650,8 +773,8 @@
                 
                 <div class="contact-form">
                     <form id="orderForm">
-                        <input type="text" name="nama" placeholder="Nama Anda" required>
-                        <input type="tel" name="whatsapp" placeholder="Nomor WhatsApp" required>
+                        <input type="text" name="nama" placeholder="Nama Anda" required inputmode="text">
+                        <input type="tel" name="whatsapp" placeholder="Nomor WhatsApp" required inputmode="tel">
                         <textarea name="pesanan" placeholder="Pesanan Anda (Contoh: 1 Seblak Level 3, 2 Mie Jebew Level 2, 1 Es Jeruk Peras)" required></textarea>
                         <textarea name="alamat" placeholder="Alamat Pengiriman (Jika delivery)" required></textarea>
                         <textarea name="catatan" placeholder="Catatan Tambahan (Level pedas, dll)"></textarea>
@@ -710,7 +833,7 @@
             const encodedMessage = encodeURIComponent(message);
             
             // Your WhatsApp number
-            const whatsappNumber = '083848847331'; // Format: 628xxxxxx (tanpa + dan spasi)
+            const whatsappNumber = '083848847331';
             
             // Create WhatsApp link
             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
@@ -721,6 +844,18 @@
             // Reset form
             this.reset();
         });
+
+        // Mobile adjustments
+        function adjustForMobile() {
+            if (window.innerWidth <= 768) {
+                document.querySelectorAll('.menu-item').forEach(item => {
+                    item.style.marginBottom = '20px';
+                });
+            }
+        }
+
+        window.addEventListener('load', adjustForMobile);
+        window.addEventListener('resize', adjustForMobile);
     </script>
 </body>
 </html>
