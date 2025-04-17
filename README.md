@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#ff4757">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Jajanan Online - Seblak, Mie Jebew & Camilan Enak</title>
+    <title>JAJANAN ONLINE - Seblak, MiNUMAN  & Camilan Enak</title>
     <style>
         :root {
             --primary: #ff4757;
@@ -769,7 +769,6 @@
                         <a href="https://facebook.com/puspitasariwnd" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
-                
                 <div class="contact-form">
                     <form id="orderForm">
                         <input type="text" name="nama" placeholder="Nama Anda" required inputmode="text">
