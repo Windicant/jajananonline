@@ -765,12 +765,11 @@
                     <p><i class="fas fa-clock"></i> Buka setiap hari 11.00 - 21.00 WIB</p>
                     
                     <div class="social-links">
-                        <a href="https://wa.me/083848847331"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/6283848847331"><i class="fab fa-whatsapp"></i></a>
+                       <a href="https://instagram.com/wndpstsr_20" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/puspitasariwnd" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
-                
                 <div class="contact-form">
                     <form id="orderForm">
                         <input type="text" name="nama" placeholder="Nama Anda" required inputmode="text">
