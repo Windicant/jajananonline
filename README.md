@@ -570,7 +570,6 @@
             </div>
         </div>
     </section>
-    
     <section id="menu">
         <div class="container">
             <div class="section-title">
