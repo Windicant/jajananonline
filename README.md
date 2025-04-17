@@ -563,7 +563,6 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Jajanan Online Enak & Pedasnya Nagih!</h1>
-            <p>Temukan berbagai macam jajanan pedas dan minuman segar yang bikin ketagihan. Pesan sekarang dan nikmati di rumah!</p>
             <div class="btn-container">
                 <a href="#menu" class="btn">Lihat Menu</a>
                 <a href="#contact" class="btn btn-outline">Pesan Sekarang</a>
@@ -579,6 +578,7 @@
             <div class="promo-banner">
                 <h2>Seblak Parasmanan</h2>
                 <p>Bebas pilih toping sesuka hati <strong></strong>Rasanya gak bakal bikin kecewa ;)</p>
+                <p>Temukan berbagai macam jajanan pedas dan minuman segar yang bikin ketagihan. Pesan sekarang dan nikmati di rumah!</p>
                 <a href="#contact" class="btn">Pesan Sekarang</a>
             </div>
             
