@@ -833,7 +833,7 @@
             const encodedMessage = encodeURIComponent(message);
             
             // Your WhatsApp number
-            const whatsappNumber = '083848847331';
+            const whatsappNumber = '6283848847331';
             
             // Create WhatsApp link
             const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
