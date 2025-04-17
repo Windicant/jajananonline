@@ -570,7 +570,6 @@
             </div>
         </div>
     </section>
-    
     <section id="menu">
         <div class="container">
             <div class="section-title">
@@ -826,20 +825,20 @@
             const alamat = this.alamat.value;
             const catatan = this.catatan.value;
             
-            // Format WhatsApp message
-            const message = `Halo Jajanan Online, saya ingin memesan:\n\nNama: ${nama}\nNo. WhatsApp: ${whatsapp}\n\nPesanan:\n${pesanan}\n\nAlamat: ${alamat}\n\nCatatan: ${catatan || 'Tidak ada catatan'}\n\nTerima kasih!`;
-            
-            // Encode message for URL
-            const encodedMessage = encodeURIComponent(message);
-            
-            // Your WhatsApp number
-            const whatsappNumber = '083848847331';
-            
-            // Create WhatsApp link
-            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-            
-            // Open WhatsApp in new tab
-            window.open(whatsappUrl, '_blank');
+             // Format WhatsApp message
+const message = `Halo Jajanan Online, saya ingin memesan:\n\nNama: ${nama}\nNo. WhatsApp: ${whatsapp}\n\nPesanan:\n${pesanan}\n\nAlamat: ${alamat}\n\nCatatan: ${catatan || 'Tidak ada catatan'}\n\nTerima kasih!`;
+
+// Encode message for URL
+const encodedMessage = encodeURIComponent(message);
+
+// WhatsApp number (pastikan format benar)
+const whatsappNumber = '6283848847331'; // Ganti dengan nomor Anda
+
+// Create WhatsApp link (pastikan tidak ada "+" atau "0" di depan)
+const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+// Open WhatsApp in new tab
+window.open(whatsappUrl, '_blank');
             
             // Reset form
             this.reset();
