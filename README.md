@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#ff4757">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>JAJANAN ONLINE - Seblak, MiNUMAN  & Camilan Enak</title>
+    <title>Jajanan Online - Seblak, Mie Jebew & Camilan Enak</title>
     <style>
         :root {
             --primary: #ff4757;
@@ -563,6 +563,7 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <h1>Jajanan Online Enak & Pedasnya Nagih!</h1>
+            <p>Temukan berbagai macam jajanan pedas dan minuman segar yang bikin ketagihan. Pesan sekarang dan nikmati di rumah!</p>
             <div class="btn-container">
                 <a href="#menu" class="btn">Lihat Menu</a>
                 <a href="#contact" class="btn btn-outline">Pesan Sekarang</a>
@@ -578,8 +579,7 @@
             <div class="promo-banner">
                 <h2>Seblak Parasmanan</h2>
                 <p>Bebas pilih toping sesuka hati <strong></strong>Rasanya gak bakal bikin kecewa ;)</p>
-                <p>Temukan berbagai macam jajanan pedas dan minuman segar yang bikin ketagihan. Pesan sekarang dan nikmati di rumah!</p>
-                <a href="#contact" class="btn">Yuk Pesan Sekarang</a>
+                <a href="#contact" class="btn">Pesan Sekarang</a>
             </div>
             
             <h3 style="text-align: center; margin-bottom: 2rem; font-size: 1.8rem; color: var(--dark);">Makanan Pedas</h3>
@@ -764,11 +764,12 @@
                     <p><i class="fas fa-clock"></i> Buka setiap hari 11.00 - 21.00 WIB</p>
                     
                     <div class="social-links">
-                        <a href="https://wa.me/6283848847331"><i class="fab fa-whatsapp"></i></a>
-                       <a href="https://instagram.com/wndpstsr_20" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://facebook.com/puspitasariwnd" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wa.me/083848847331"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
+                
                 <div class="contact-form">
                     <form id="orderForm">
                         <input type="text" name="nama" placeholder="Nama Anda" required inputmode="text">
@@ -824,7 +825,7 @@
             const alamat = this.alamat.value;
             const catatan = this.catatan.value;
             
-          // Format WhatsApp message
+             // Format WhatsApp message
 const message = `Halo Jajanan Online, saya ingin memesan:\n\nNama: ${nama}\nNo. WhatsApp: ${whatsapp}\n\nPesanan:\n${pesanan}\n\nAlamat: ${alamat}\n\nCatatan: ${catatan || 'Tidak ada catatan'}\n\nTerima kasih!`;
 
 // Encode message for URL
