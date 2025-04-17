@@ -6,7 +6,7 @@
     <meta name="theme-color" content="#ff4757">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Jajanan Online - Seblak, Mie Jebew & Camilan Enak</title>
+    <title>JAJANAN ONLINE - Seblak, MiNUMAN  & Camilan Enak</title>
     <style>
         :root {
             --primary: #ff4757;
